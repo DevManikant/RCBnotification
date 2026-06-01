@@ -8,8 +8,8 @@ from datetime import datetime
 app = func.FunctionApp()
 
 # --- CONFIGURATION ---
-TELEGRAM_TOKEN = "8788567376:AAGjmuyDnVBE0TXHtGqD5Bl0W65eFO96skg"
-CHAT_ID = "1124894577"
+TELEGRAM_TOKEN = "YOUR:AAGjmuyDnVBE0TXHtGqD5Bl0W65eFO96skg"
+CHAT_ID = "YOUR"
 API_URL = "https://rcbscaleapi.ticketgenie.in/ticket/eventlist/O"
 
 def send_telegram(msg):
