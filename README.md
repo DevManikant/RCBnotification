@@ -1,9 +1,9 @@
 High-Availability Inventory Monitoring Pipeline
 
-An event-driven, serverless data pipeline built on Azure Functions designed to execute high-frequency state polling, real-time change detection, and automated telemetry alerts. 
+I made this out of love for RCB match events. As it is nearly impossible to get notofication for RCB events and even if one get a notification, by the time we visit their website, it gets sold out within a minute. Thats why i build this solution.  
 
 ## ⚡ Core Architecture Features
-* **Stateless Checking:** Implements local, isolated file caching to calculate volumetric state changes between polling cycles, suppressing redundant downstream alert traffic.
-* **Network Optimization:** Enforces strict execution timeouts (10s/15s boundaries) to prevent hanging concurrent asynchronous worker threads.
+* **Fast Checking:** The script polls the website's dom every 30 seconds, and checks if the particular text("Sold out", "Book Now") is available or not.
+* **Logical Optimization:** If the script finds "Book Now" then it will send a notification on telegram every hour or if the script finds "Sold Out" it will send a notification every 6 hours that "Script is working".
 * **Operational Security:** Zero hardcoded credentials. Fully integrates with platform environment variables (`os.environ`) for secret management.
 
