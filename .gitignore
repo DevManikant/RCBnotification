@@ -10,7 +10,7 @@ ENV/
 
 # Local Application Caches & State Trackers
 *.dat
-*.txt
+
 *.log
 /tmp/
 
